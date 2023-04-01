@@ -1,4 +1,4 @@
-
+// images taken from : https://github.com/AsmrProg-YT/100-days-of-javascript/tree/master/Day%20%2310%20-%20Weather%20App
 // Reference de la classe wheater-search
 const search = document.querySelector(".wheater-search");
 
@@ -28,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(data);
 
 
+        // if(search_content !== data.location.name) {
+        //   weather_box.style.display = "none";
+
+        // } else {
+
+        //   weather_box.style.display = "flex";
+        // }
         weather_box.style.display = "flex";
         // Reference du conteneur de tous les elements
         const container = document.querySelector(".container");
@@ -47,6 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const wheater_rain = document.querySelector(".wheater-rain");
         // Reference de la classe qui affiche limage des conditions
         const image = document.querySelector(".wheater-image");
+
+
 
 
 
@@ -73,16 +82,62 @@ document.addEventListener("DOMContentLoaded", function () {
         const condition = data.current.condition.text;
         wheater_time.innerHTML = condition;
         // Affiche licons des conditions
-        const icon = data.current.condition.icon;
-        image.src = icon
+        console.log("Starting code");
+        const icon_text = data.current.condition.text;
+        console.log(icon_text);
 
-
+        if (icon_text === "Sunny") {
+          console.log("Sunny condition met");
+          image.src = "img/clear.png";
+        } else if (icon_text === "Partly cloudy") {
+          console.log("Partly Cloudy condition met");
+          image.src = "img/cloud.png";
+        } else if (icon_text === "Blizzard") {
+          console.log("Blizzard condition met");
+          image.src = "img/snow.png";
+        } else if (icon_text === "Rainy" || "Light rain") {
+          console.log("Rainy condition met");
+          image.src = "img/rain.png";
+        }
+        console.log("Ending code");
       })
       .catch(error => {
         console.error(error);
       });
   });
 });
+
+
+// Added function from ChatGPT
+// Define the function that will play the song
+function playSong() {
+  // Replace the URL with the location of your song file
+  var audio = new Audio('audio/LoL.mp3');
+  audio.play();
+}
+
+// Keep track of the keys that have been pressed
+var keysPressed = [];
+
+// Add an event listener to the document to detect key presses
+document.addEventListener('keydown', function (event) {
+  // Check if the pressed key is q, w, e or r
+  if (event.key === 'q' || event.key === 'w' || event.key === 'e' || event.key === 'r') {
+    // Add the key to the array of keys pressed
+    keysPressed.push(event.key);
+    // If q w e r have been pressed in sequence, call the playSong function
+    if (keysPressed.join('') === 'qwer') {
+      playSong();
+      // Reset the array of keys pressed
+      keysPressed = [];
+    }
+  } else {
+    // Reset the array of keys pressed if any other key is pressed
+    keysPressed = [];
+  }
+});
+
+
 
 // Evenemen sur le bouton search qui fetch les data
 
