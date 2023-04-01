@@ -210,4 +210,8 @@ body {
   footer {
     text-align: center;
   }
+
+  footer p {
+    margin-top: 1rem;
+  }
   
