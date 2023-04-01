@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>Wheater app Made By Sam B.</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Weather App Made by Sam</h1>
+    </header>
+
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-thermometer-empty"></i>
+            <input type="text" id="search-content" placeholder="What it the wheater in ?">
+            <button class="wheater-search"><i class="fa-solid fa-search"></i></button>
+        </div>
+
+        <!-- <div class="wheater-404">
+            <img src="./image/404.png" alt="" class="wheater-img-404">
+        </div> -->
+
+        <div id="weather-card" class="wheater-box">
+            <p class="wheater-place"></p>
+            <p class="wheater-time"></p>
+            <img class="wheater-image" src="">
+            <div class="container-temperature">
+                <span class="wheater-temperature"></span>
+                <i class="fa-solid fa-temperature-high"></i>
+            </div>
+
+            <div>
+                <span class="wheater-wind"></span>
+                <i class="fa-solid fa-wind"></i>
+                <span class="wheater-snow"></span>
+                <i class="fa-solid fa-droplet"></i>
+                <span class="wheater-rain"></span>
+                <i class="fa-solid fa-cloud-rain"></i>
+            </div>
+        </div>
+
+
+    </div>
+    <section>
+        <div class='air air1'></div>
+        <div class='air air2'></div>
+        <div class='air air3'></div>
+        <div class='air air4'></div>
+    </section>
+
+    <footer>
+        <span>This weather app was made By Samuel Boyer &copy;</span>
+    </footer>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
