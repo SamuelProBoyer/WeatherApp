@@ -216,5 +216,43 @@ body {
   footer p {
     margin-top: 1rem;
   }
+
+
+  @media screen and (max-width: 568px) {
+  .container {
+    margin: 0 20px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  .search-box {
+    width: 345px;
+  }
+
+  .search-box input[type="text"] {
+    font-size: 1rem;
+    margin-right: 50px;
+  }
+
+  .wheater-box {
+    min-width: auto;
+    padding: 20px;
+  }
+  .container-temperature .wheater-temperature {
+    font-size: 3rem;
+  }
+
+  
+
+
+
+  
+}
+
+
+
+
+
   
   
