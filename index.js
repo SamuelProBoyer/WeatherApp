@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(data);
 
 
-        // if(search_content !== data.location.name) {
-        //   weather_box.style.display = "none";
+        if(search_content === "") {
+          weather_box.style.display = "none";
 
-        // } else {
+        } else {
 
-        //   weather_box.style.display = "flex";
-        // }
-        weather_box.style.display = "flex";
+          weather_box.style.display = "flex";
+        }
+        // weather_box.style.display = "flex";
         // Reference du conteneur de tous les elements
         const container = document.querySelector(".container");
         // Reference de la boite de recherche
@@ -136,6 +136,10 @@ document.addEventListener('keydown', function (event) {
     keysPressed = [];
   }
 });
+
+
+
+
 
 
 
